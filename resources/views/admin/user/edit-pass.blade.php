@@ -22,6 +22,8 @@
 
         </div>
     </div>
+
+    {{-- update lần 2 --}}
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="iputName" class="text-muted d-block mb-2">Password mới</label>
