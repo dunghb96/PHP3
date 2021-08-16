@@ -1,0 +1,10 @@
+.add-product-preview-img{
+    width: 100%;
+    min-height: 500px;
+    border: 1px solid #ccc;
+    margin-bottom: 7px;
+    box-sizing: border-box;
+}
+.image{
+    width: 25%;
+}
