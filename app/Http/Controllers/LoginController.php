@@ -29,10 +29,12 @@ class LoginController extends Controller
             ]
         );
         $remember = $request->has('remember_me') ? 'true' : 'false';
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {  //hàm này so sánh và trả về true or false
             return redirect(route('room.list'));
         }
         return redirect()->back()->with('msg', 'sai thong tin');
+// để dùng Auth::user(); và Auth::id() thì route hiện tại phải có middleware('web')
+
     }
     public function register()
     {
@@ -55,13 +57,13 @@ class LoginController extends Controller
                 'email.required' => 'Hãy nhập email cho tài khoản',
                 'email.email' => 'Không đúng định dạng email',
                 'password.required' => 'Hãy nhập password',
-                'password.min' => 'Password phải từ 6 ký tự' 
+                'password.min' => 'Password phải từ 6 ký tự'
             ]
         );
         User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->password) 
+            'password' => Hash::make($request->password)
         ]);
         return redirect(route('login'))->with('status', 'Đăng ký thành công');
     }

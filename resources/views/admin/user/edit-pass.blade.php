@@ -23,6 +23,25 @@
         </div>
     </div>
 
+    {{-- bước đầu tiên là anh : git add .
+    xong rồi a git commit -m "message mà mình muốn ghi chú"
+    bước sau là a git push origin main   --->nếu mà a tạo 1 nhánh mới tên là dung thì phải --}}
+
+
+{{--
+    git push origin dung  -> nhưng cái này a phải tạo ra. cái này em không rõ về cái này lắm
+
+    sau phải tạo nhiều nhánh ra để đẩy lên...  nhưng đẩy lên phải clear nó đi hay sao ấy --}}
+
+    {{-- nghe phức tạp thế
+    a cứ đẩy theo cách cách 1 thôi
+    cái 2 thì sau làm nhiều sẽ quen
+
+    hôm trước anh dùng cái git push origin master bị lỗi. .. ừ cái đó cũng đc. nhưng mà anh phải đang đứng ở bên trong nhánh mastẻ với đc hay sao ấy
+    Em cũng biết đc sơ sơ thế. --}}
+
+
+
     {{-- update lần 2 --}}
     <div class="form-row">
         <div class="form-group col-md-6">

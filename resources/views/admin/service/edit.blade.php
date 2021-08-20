@@ -35,7 +35,7 @@
             </div>
         </div>
     </div>
-    <button type="submit" class="mb-2 btn btn-success mr-2">Thêm</button>
+    <button type="submit" class="mb-2 btn btn-success mr-2">Sửa</button>
     <a href="{{route('service.list')}}" class="mb-2 btn btn-danger mr-2">Hủy</a>
 </form>
 @endsection

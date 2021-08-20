@@ -68,6 +68,7 @@
             @foreach ($rooms as $c)
                 <tr>
                     <th scope="row">{{ ($rooms->currentPage() - 1) * $pageSize + $loop->iteration }}</th>
+                    {{-- công thức tính để khi chuyển trang không bị reset lại stt bản ghi --}}
                     <td>{{ $c->room_no }}</td>
                     <td>{{ $c->floor }}</td>
                     <td><img src="{{ asset('storage/' . $c->image) }}" width="70" alt=""></td>
@@ -75,7 +76,7 @@
                     <td>
                         @isset($c->services)
                             @foreach ($c->services as $servies)
-                                <span class="badge badge-secondary"> {{ $servies->name }} </span><br>
+                                <span class="badge badge-secondary"> {{$servies->name}} </span><br>
                             @endforeach
                         @endisset
                     </td>

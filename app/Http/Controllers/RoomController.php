@@ -17,7 +17,7 @@ class RoomController extends Controller
         $services=Service::all();
         $pageSize=5;
         $searchData=$request->except('page');
-
+        // searchData = dữ liệu từ form gửi lên mà bỏ qua page để khi chuyển trang cùng dk thì giữ nguyên giữ liệu với các điều kiện đã cho
         if(count($request->all()) == 0 ){
             $rooms = Room::paginate($pageSize);
         }else{
